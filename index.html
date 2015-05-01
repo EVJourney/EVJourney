@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>EVJourney - Electric Vehicle Charging Station Locator and Route Planner</title>
+	<link rel="stylesheet" href="style-r.css">
+	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="layout.js"></script>
+	<script src="route-planner.js"></script> 
+	
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-30479182-1']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<header class = "top">
+			<a href="http://www.evjourney.com"><img src ="evj-logo.png" class = "logo"/></a>
+			<div class="search-form station-search">
+				<input type="text" class="search" id="findInput" placeholder="Find stations near..." onkeypress="if(event.which == 13 || event.keyCode==13) {$('#findInput').blur(); findByAddress();}" />
+			</div>
+			<div class="search-form route-search">
+			<input type="text" class="search" id="startInput" placeholder="Plan a route from..." onkeypress="if(event.which == 13 || event.keyCode==13) {$('#startInput').blur(); searchLocations();}" />
+			<input type="text" class="search" id="endInput" placeholder="To..." onkeypress="if(event.which == 13 || event.keyCode==13) {$('#endInput').blur(); searchLocations();}" />
+			</div>
+		<nav class="menu">
+			<span class="symbol expand"></span>
+			<ul class="navlinks">
+				<li id="station_locator"><span class="symbol">⌖</span>Station Locator</li>
+				<li id="route_planner"><span class="symbol"></span>Route Planner</li>
+				<!-- <li><a href ="#"><span class="symbol"></span>EV Basics</a></li> -->
+				<!--<li><a href ="#"><span class="symbol"></span>Sign In</a></li> -->
+				<li id="info"><span class="symbol">❓</span>How It Works</a></li>
+      </ul>
+      
+      
+		</nav>
+		</header>
+		<div class="map">
+			<div id="map_canvas"></div>
+			<div class = "overlay">
+				<div id="overlay_bg"></div>
+				<div id ="modal_container">
+					<div class = "modal_border"><h1 id="info_header">EV Route Planner</h1><h1 id="contact_header">Contact Us</h1>
+					<div id="close"><span class="symbol">␡</span></div></div>
+					
+					<div id="info_content"><p>To use the EVJourney Route Planner, enter a starting address and an ending address.  A suggested route will be displayed on the map.  Electric vehicle charging stations in close proximity to the route are displayed as markers.</p>
+						
+						<p>Click on a marker to get details for the charging station.  The info window will show  name, address, phone number, network and charger types.  Clicking on Check Availability displays real-time port use status where possible.</p>
+						
+						<p>Charging stations that have at least one fast charge outlet have orange markers.</p>
+						
+						<p>To use a charging station as a waypoint, click on a station marker near a route and then click Change Waypoint.  The route will include the new waypoint.  To remove a waypoint, click the station to remove and click Change Waypoint again. </p>
+						
+						<p>The Directions link at the top left will display a map with driving directions to the charging station passing through any waypoints.</p>
+						
+						<p>The Station Locator displays charging stations near the address entered.</p>
+					</div>
+					<div id="contact_content">
+						<FORM METHOD="POST" id="contact_form">
+							<label>Your Name:</label>
+							<input type='text' id='contact_name' name='contact_name' required="required" ONKEYPRESS='if (event.keyCode == 13) event.returnValue = false;'>
+							<label>Your Email:</label>
+							<input type='email' id='email' name='email' required="required" ONKEYPRESS='if (event.keyCode == 13) event.returnValue = false;'>
+							<label>Subject:</label>
+							<input type='text' id='subject' name='subject' required="required" ONKEYPRESS='if (event.keyCode == 13) event.returnValue = false;'>
+							<label>Message:</label>
+							<textarea id='message' name='message' required ONKEYPRESS='if (event.keyCode == 13) event.returnValue = false;' value = ></textarea>
+							
+							<INPUT id='submit' TYPE=SUBMIT NAME="submit" VALUE="Submit">
+						</FORM>
+					</div>
+					<div id="success">
+						<p>Your message has been sent.  Thank you.</p>
+					</div>
+					<div id ="avail_content">Station ID:</div>
+				</div>
+				<div class = "getdirections"></div>
+				<div class = "loading"></div>
+			</div>
+      <select id="locationSelect" style="width:100%;visibility:hidden"></select>
+		</div>
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="#" id="contact">Contact Us</a></li>
+<!--					<li><a href = "http://www.youtube.com/watch?v=ZStjWXgpk6s" target="_blank">Video</a></li>
+					<li><a href = "http://evjourney.com/evj_share_photo.php" target="_blank">Share Station Photos</a></li> -->
+					<li class="foot-right"><a href="http://www.facebook.com/evjourney" target="_blank"><img src="facebook24.png"/></a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+</body>
+</html>
