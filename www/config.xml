@@ -6,14 +6,14 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>EVJourney</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Find EV Charging Stations Near You, Plan Routes, and Check Station Availability.
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+        EVJourney.com
     </author>
 
     <!--
