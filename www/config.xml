@@ -17,6 +17,14 @@
     </author>
 	
 	<icon src="res/icon.png" />
+	
+	<platform name="android">
+    <!-- you can use any density that exists in the Android project -->
+
+    <splash src="res/screen/android/evj-splash-l.png" density="land-xhdpi"/>
+
+    <splash src="res/screen/android/evj-splash-p.png" density="port-xhdpi"/>
+	</platform>
 
     <!--
         If you do not want any permissions to be added to your app, add the
