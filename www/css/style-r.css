@@ -350,7 +350,7 @@ height: 21em;
 	height: 45px;
 	width: 158px;
 	z-index:300;
-	background: url("../loading.gif") no-repeat center;
+	background: url("loading.gif") no-repeat center;
 	background-color: rgba(0,0,0,.3);
 	background-clip:content;
 	margin: auto;
