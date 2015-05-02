@@ -21,7 +21,7 @@
 	<platform name="android">
     <!-- you can use any density that exists in the Android project -->
 	
-	<splash src="res/screen/android/evj-splash-l-ldpi.png" density="land-ldpi"/>
+<!--	<splash src="res/screen/android/evj-splash-l-ldpi.png" density="land-ldpi"/>
 
     <splash src="res/screen/android/evj-splash-p-ldpi.png" density="port-ldpi"/>
 	
@@ -37,6 +37,7 @@
 
     <splash src="res/screen/android/evj-splash-p-xhdpi.png" density="port-xhdpi"/>
 	</platform>
+	-->
 
     <!--
         If you do not want any permissions to be added to your app, add the
@@ -92,9 +93,9 @@
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
-
-    <!-- Define app icon for each platform. -->
-    <icon src="icon.png" />
+  <icon src="icon.png" />
+    <!-- Define app icon for each platform. 
+   
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
@@ -107,9 +108,9 @@
     <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
-    <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
+    <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />  -->
 
-    <!-- Define app splash screen for each platform. -->
+    <!-- Define app splash screen for each platform. 
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
@@ -125,7 +126,7 @@
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
     </gap:config-file>
-
+-->
     <!--
         Define access to external domains.
         <access />            - a blank access tag denies access to all external resources.
@@ -149,9 +150,9 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    <platform name="ios">
+   <!-- <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-    </platform>
+    </platform> -->
 
 </widget>
