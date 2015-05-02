@@ -20,10 +20,22 @@
 	
 	<platform name="android">
     <!-- you can use any density that exists in the Android project -->
+	
+	<splash src="res/screen/android/evj-splash-l-ldpi.png" density="land-ldpi"/>
 
-    <splash src="res/screen/android/evj-splash-l.png" density="land-xhdpi"/>
+    <splash src="res/screen/android/evj-splash-p-ldpi.png" density="port-ldpi"/>
+	
+	<splash src="res/screen/android/evj-splash-l-mdpi.png" density="land-mdpi"/>
 
-    <splash src="res/screen/android/evj-splash-p.png" density="port-xhdpi"/>
+    <splash src="res/screen/android/evj-splash-p-mdpi.png" density="port-mdpi"/>
+	
+	<splash src="res/screen/android/evj-splash-l-hdpi.png" density="land-hdpi"/>
+
+    <splash src="res/screen/android/evj-splash-p-hdpi.png" density="port-hdpi"/>
+
+    <splash src="res/screen/android/evj-splash-l-xhdpi.png" density="land-xhdpi"/>
+
+    <splash src="res/screen/android/evj-splash-p-xhdpi.png" density="port-xhdpi"/>
 	</platform>
 
     <!--
