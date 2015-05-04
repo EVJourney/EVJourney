@@ -93,15 +93,15 @@ a {
 }
 
 #startInput {
-	background: url('origin.png') no-repeat 8px 6px;
+	background: url('../origin.png') no-repeat 8px 6px;
 }
 
 #endInput {
-	background: url('destination.png') no-repeat 8px 6px;
+	background: url('../destination.png') no-repeat 8px 6px;
 }
 
 #findInput {
-	background: url('search.png') no-repeat 8px 6px;
+	background: url('../search.png') no-repeat 8px 6px;
 	margin-top: 1.4em;
 }
 
