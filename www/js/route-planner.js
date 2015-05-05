@@ -72,7 +72,7 @@
 		routePlanning = false;
 		$(".loading").show();
 				
-    	var url = "http://evjourney.com/EVJ-Save-Location.php?latitude=" + latitude + "&longitude=" + longitude;
+    	/* var url = "http://evjourney.com/EVJ-Save-Location.php?latitude=" + latitude + "&longitude=" + longitude;
 
     	var client = new XMLHttpRequest();
 
@@ -80,7 +80,7 @@
 
     	client.setRequestHeader("Content-Type", "text/plain");
 
-    	client.send();
+    	client.send(); */
 
     	var coords = new google.maps.LatLng(latitude, longitude);
 		google.maps.visualRefresh = true
